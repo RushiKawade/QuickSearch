@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block body %}
+
+<h2 align="middle">RECENT</h2>
+
+<!--<table>-->
+  <!--<tr>-->
+    <!--<th>Page ID</th>-->
+  <!--<th>Username</th>-->
+  <!--</tr>-->
+ <!--{% for data in data_list %}-->
+ <!--<tr>-->
+  <!--<td>{{ data.pageId }}</td>-->
+  <!--<td>{{ data.username }}</td>-->
+ <!--</tr>-->
+ <!--{% endfor %}-->
+    <!---->
+<!--</table>-->
+
+     {% for data in data_list %}
+
+
+
+                      <div class="col-md-4" align="middle" >
+                                    <div class="thumbnail">
+                                      <a href="{{data.pageId}}">
+                                        <img src="{% static 'qsearch.png' %}"  style="width:50%"  >
+                                        <div class="caption">
+                                          <P  ><strong>links: {{data.pageId}}</strong></P>
+                                        </div>
+                                      </a>
+                                    </div>
+                      </div>
+
+
+
+              {% endfor %}
+
+
+
+
+
+{% endblock %}

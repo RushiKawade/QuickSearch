@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+ {% block body %}
+    <h1>
+        Registration Form
+    </h1>
+    <div class="container">
+        <div class="col-md-5">
+            <form method="post" action="registration">
+                {% csrf_token %}
+                 {{ frm.as_p }}
+            <button type="submit" class="signupbtn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
